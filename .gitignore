@@ -1,4 +1,5 @@
 ./*
+.idea
 !include
 !.gitignore
 !README.md
