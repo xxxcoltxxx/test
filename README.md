@@ -3,5 +3,5 @@
 Необходимо определить список тестов для класса Translate и написать автоматические тесты с помощью фреймворка PHPUnit.
 Желательно PHPUnit и компоненты для него устанавливать через composer. На почту a_paramonov@irknet.ru отправить полный архив, включающий в себя существующие скрипты, тесты и composer.json (если он будет)
 
-Для проверки работоспособности нужно скопировать include/config/translate.ini.example в include/config/translate.ini и прописать там ключ длступа к Yandex translate API. Ключ, указанный в примере, так же работает
+Для проверки работоспособности нужно скопировать include/config/translate.ini.example в include/config/translate.ini и прописать там ключ доступа к Yandex translate API. Ключ, указанный в примере, так же работает
 Запуск скрипта: php translate.php
