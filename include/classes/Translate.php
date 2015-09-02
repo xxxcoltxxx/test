@@ -5,7 +5,7 @@
  */
 class Translate
 {
-    /** @var string  */
+    /** @var string */
     public $lang = "ru";
     /** @var  Curl */
     private $curl;
@@ -29,17 +29,11 @@ class Translate
 
     public function translate($phrase, $lang_from = "ru", $lang_to = "en")
     {
-        $params = [
-            'key' => $this->config['key'],
-            'text' => $phrase,
-            'lang' => "{$lang_from}-{$lang_to}"
-        ];
+        $params = ['key' => $this->config['key'], 'text' => $phrase, 'lang' => "{$lang_from}-{$lang_to}"];
         $response = json_decode($this->curl->get("api/v1.5/tr.json/translate", $params), true);
         if ($response['code'] != 200) {
             throw new Exception($this->error_codes[$this->curl->last_http_code] ?: "Unknown error", $this->curl->last_http_code);
         }
         return $response;
     }
-
-
 }

@@ -1,6 +1,7 @@
 <?php
 
-class Config {
+class Config
+{
     private $name;
     /** @var Config[] */
     private static $instance = array();
